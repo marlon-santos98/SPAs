@@ -1,6 +1,7 @@
 import "./globals.css";
 import Topo from "@/componentes/Topo/index"
 import Rodape from "@/componentes/Rodape/index"
+import Head  from "next/head"; 
 
 export const metadata = {
   title: "Create Next App",
@@ -10,10 +11,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://www.w3schools.com/w3css/4/w3.css"
+        />
+      </Head>
       <body>
-        <Topo/>
+        <Topo />
         {children}
-        <Rodape/>
+        <Rodape />
       </body>
     </html>
   );
