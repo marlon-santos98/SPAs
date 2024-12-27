@@ -5,10 +5,13 @@
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
 }
 .header{
     background-color: #F9DB79;
     width: 100%;
+    position: fixed;
+    z-index: 3;
 }
 .link a{
     text-decoration: none;

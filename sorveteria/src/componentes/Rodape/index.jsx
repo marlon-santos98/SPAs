@@ -4,7 +4,8 @@ import Image from "next/image"
 
 export default function Rodape(){
     return(
-        <footer>
+        <footer className={styles.rodape}>
+            <div className={styles.div}>
             <Image
                 src="/logo.png"
                 alt="Logo da Sorveteria"
@@ -27,7 +28,8 @@ export default function Rodape(){
                 <p>ABERTO TODOS OS DIAS</p>
                 <p>10:00 - 22:00</p>
             </div>
-            <div>
+            </div>
+            <div className={styles.developedby}>
                 <p>Gelateria. Orgulhosamente desenvolvido por Marlon Santos</p>
             </div>
         </footer>

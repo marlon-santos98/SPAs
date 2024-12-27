@@ -13,7 +13,7 @@ export default function Topo(){
                 height={100}
             />
             <nav className={styles.link}>
-                <Link href="/home">Home</Link>
+                <Link href="/">Home</Link>
                 <Link href="/sobre">Sobre</Link>
                 <Link href="/sabores">Sabores</Link>
             </nav>

@@ -1,0 +1,18 @@
+.rodape{
+    background-color: black;
+    color: white;
+}
+.div{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    text-align: left;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 80px 0;
+    gap: 80px;
+}
+.developedby{
+    padding: 30px;
+    text-align: center;
+}
