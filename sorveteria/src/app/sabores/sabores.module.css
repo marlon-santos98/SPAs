@@ -8,10 +8,41 @@
   /* Estilo para a div do texto sobre a imagem */
   .text-container {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centraliza o conteúdo */
     color: white;
     text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 3px 2px black;
   }
-  
+  .cards{
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    text-align: center;
+    gap: 30px;  
+    margin: 0px auto 90px auto;
+  }
+.card_individual{
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 0px auto;
+  box-shadow: 3px 3px 3px rgb(240, 239, 239);
+}
+.card_individual p{
+  font-size: 0.8rem;
+  padding: 5px;
+}
+.image_card{
+  width: 100%;
+  height: 100%;
+}
+.h2{
+  text-align: center;
+  padding: 60px 0 20px 0;
+}
