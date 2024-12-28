@@ -57,3 +57,12 @@
     background-size: fill;
     
 }
+@media(min-width: 300px) and (max-width: 480px){
+    .main{
+        width: 480px;
+
+    }
+    .section{
+        margin-top: 90px;
+    }
+}

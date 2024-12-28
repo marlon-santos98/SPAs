@@ -16,3 +16,18 @@
     padding: 30px;
     text-align: center;
 }
+
+@media(min-width: 300px) and (max-width: 480px){
+    .rodape{
+        width: 480px;
+    }
+    .div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .developedby{
+        padding: 0 35px 20px 35px;
+    }
+}

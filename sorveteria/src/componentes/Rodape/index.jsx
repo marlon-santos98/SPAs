@@ -1,5 +1,4 @@
 import styles from "@/componentes/Rodape/Rodape.module.css"
-import Link from "next/link"
 import Image from "next/image"
 
 export default function Rodape(){
