@@ -1,0 +1,40 @@
+.image {
+    object-fit: cover;  /* Faz com que a imagem ocupe todo o espaço disponível, sem distorcer */
+    width: 100%;
+    height: 100%;
+}
+    /* Estilo para a div do texto sobre a imagem */
+.text-container {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centraliza o conteúdo */
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+        text-shadow: 2px 3px 2px black;
+        letter-spacing: 4px;
+    }
+    .div{
+        text-align: center;
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 70px 0;
+    }
+    .div p{
+        margin: 20px 0;
+    }
+    .div h4{
+        margin: 20px 0;
+    }
+    .div_image{
+        display: flex;
+        width: 100%;
+        height: auto; /* Ajusta a altura automaticamente */
+    
+    }
+    .images{
+        width: 100%;
+        display: block; /* Remove qualquer espaço extra causado por imagens inline */
+    }

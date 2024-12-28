@@ -9,8 +9,8 @@ export default function Sabores() {
         <Image
           src="/banner-sabores.jpg"
           alt="Banner Sabores"
-          width={1800}
-          height={400}
+          width={2800}
+          height={1400}
           className={styles.image}  // Estilo personalizado da imagem (opcional)
         />
         <div className={styles["text-container"]}>
@@ -26,8 +26,8 @@ export default function Sabores() {
         <Image
           src="/sabor-oreo.jpg"
           alt="Sabor Oreo"
-          width={100}
-          height={100}
+          width={400}
+          height={400}
           className={styles.image_card}
         />
         <h4>Sorvete de Oreo</h4>
@@ -37,8 +37,8 @@ export default function Sabores() {
       <Image
           src="/sorbet-morango.png"
           alt="Sabor Morango"
-          width={100}
-          height={100}
+          width={500}
+          height={500}
           className={styles.image_card}
         />
         <h4>Sorvete Morando</h4>
@@ -47,9 +47,9 @@ export default function Sabores() {
       <div className={styles.card_individual}>
       <Image
           src="/sabor-pistache.png"
-          alt="Sabor Oreo"
-          width={100}
-          height={100}
+          alt="Sabor Pistache"
+          width={500}
+          height={500}
           className={styles.image_card}
         />
         <h4>Sorvete Pistache</h4>
@@ -59,8 +59,8 @@ export default function Sabores() {
       <Image
           src="/sabor-cookies-avela.png"
           alt="Sabor Cookies e avela"
-          width={100}
-          height={100}
+          width={600}
+          height={600}
           className={styles.image_card}
         />
         <h4>Sorvete Cookies & Avelã</h4>
@@ -70,8 +70,8 @@ export default function Sabores() {
       <Image
           src="/sorbet-Kiwi.png"
           alt="Sabor Kiwi"
-          width={100}
-          height={100}
+          width={600}
+          height={600}
           className={styles.image_card}
         />
         <h4>Sorvete de Kiwi</h4>
@@ -81,8 +81,8 @@ export default function Sabores() {
       <Image
           src="/sorbet-limao.png"
           alt="Sabor Limão"
-          width={100}
-          height={100}
+          width={600}
+          height={600}
           className={styles.image_card}
         />
         <h4>Sorvete de Limão Siciliano</h4>
