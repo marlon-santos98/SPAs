@@ -46,3 +46,25 @@
   text-align: center;
   padding: 60px 0 20px 0;
 }
+@media(min-width: 300px) and (max-width: 480px){
+  .text-container{
+    font-size: 1rem;
+    transform: translate(-50%, -50%); 
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: right;
+    width: 230px;
+  }
+  .section{
+    width: 480px;
+  }
+}
+@media(min-width: 481px) and (max-width: 768px){
+  .section{
+    width: 768px;
+  }
+  .text-container{
+    margin-left: 90px;
+  }
+}

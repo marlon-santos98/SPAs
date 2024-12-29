@@ -37,3 +37,11 @@
         padding: 5px;
     }
 }
+@media(min-width: 481px) and (max-width: 768px){
+    .div{
+        width: 768px;
+    }
+    .header{
+        display: flex;
+    }
+}

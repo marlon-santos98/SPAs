@@ -3,7 +3,7 @@ import styles from "@/app/sobre/sobre.module.css"
 
 export default function Sobre(){
     return(
-        <section>
+        <section className={styles.section}>
             <Image
                 src="/banner-sobre.png"
                 alt="Banner sabores"

@@ -3,7 +3,7 @@ import styles from "@/app/sabores/sabores.module.css"; // Se você tiver um esti
 
 export default function Sabores() {
   return (
-    <section>
+    <section className={styles.section}>
       <div>
         {/* A imagem fica como fundo da "container", permitindo que o texto fique sobre ela */}
         <Image

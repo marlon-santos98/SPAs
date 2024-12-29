@@ -37,4 +37,61 @@
     .images{
         width: 100%;
         display: block; /* Remove qualquer espaço extra causado por imagens inline */
+        height: 90vh;
+    }
+    @media(min-width: 300px) and (max-width: 480px){
+        .section{
+            width: 480px;
+        }
+        .image {
+            object-fit: cover;  /* Faz com que a imagem ocupe todo o espaço disponível, sem distorcer */
+            height: 90vh;
+            width: 480px;
+        }
+        .text-container {
+            display: flex;
+            text-align: center;
+            top: 55%;
+            left: 58%;
+            transform: translate(-50%, -50%); /* Centraliza o conteúdo */
+            color: white;
+            font-size: 1.8rem;
+            text-shadow: 2px 3px 2px black;
+            letter-spacing: 4px;
+        }
+        .div{
+            padding: 40px;
+        }
+        .images{
+            height: 40vh;
+        }
+    }
+    @media(min-width: 481px) and (max-width: 768px){
+        .section{
+            width: 768px;
+        }
+        .image{
+            height: 60vh;
+        }
+        .images{
+            height: 55vh;
+        }
+        .div{
+            padding: 40px;
+        }
+        .text-container{
+            margin-left: 90px;
+        }
+    }
+    @media(min-width: 769px) and (max-width: 1279px){
+        .div{
+            padding: 40px;
+        }
+        .images{
+            height: 65vh;
+            object-fit: cover;
+        }
+        .text-container{
+            top: 40%;
+        }
     }
