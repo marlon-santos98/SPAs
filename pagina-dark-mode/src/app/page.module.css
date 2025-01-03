@@ -1,0 +1,24 @@
+.dark_mode {
+  background-color: black;
+}
+
+.dark_mode .header_container h1 {
+  color: white;
+}
+
+.dark_mode .header_container button {
+  color: black;
+}
+
+.dark_mode .main_container div h2 {
+  color: white;
+}
+
+.dark_mode .main_container div p {
+  color: white;
+}
+
+.light_mode .main_container button {
+  background-color: black;
+  color: white;
+}
