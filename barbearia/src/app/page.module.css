@@ -8,7 +8,20 @@ Paleta de cores com o tema dark
 #FFF
 #252323
 */
-
+.button{
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 2px solid #B2987D;
+  cursor: pointer;
+}
+.button_dark_mode{
+  background-color: rgb(36, 33, 33);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 2px solid #B2987D;
+  cursor: pointer;
+}
 .assinatura{
   font-family: 'Great Vibes', cursive;
   font-weight: 500;
@@ -29,6 +42,107 @@ Paleta de cores com o tema dark
   height: 40vh;
   object-fit: cover;
 }
+.image_dark_mode{
+  object-fit: cover;
+  background-color: white;
+  border-radius: 50%;
+  height: 7vh;
+  width: 4vw;
+}
 .div{
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: center;
+  padding-top: 80px;
   
+}
+.div h1{
+  margin-bottom: 40px;
+  font-size: 2.4rem;
+}
+.div p{
+  padding: 0 0 45px 0;
+}
+.div p:first-of-type{
+  font-weight: 700;
+}
+.main_dark_mode{
+  background-color: rgb(36, 33, 33);
+  color: white;
+} 
+.main{
+  background-color: white;
+  height: 100vh;
+}
+@media (min-width: 300px) and (max-width: 480px){
+  .header{
+    width: 100%;
+    padding: 30px 0;
+    justify-content: space-around;
+    display: flex;
+  }
+  .image_dark_mode{
+    object-fit: cover;
+    background-color: white;
+    border-radius: 50%;
+    height: 8vh;
+    width: 14vw;
+  }
+  .button{
+    margin: 0 10px 0 0;
+  }
+  .image{
+    height: 30vh;
+  }
+  .div{
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  .div h1{
+    font-size: 2rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px){
+  .header{
+    width: 100%;
+    padding: 30px 0;
+    justify-content: space-around;
+    display: flex;
+  }
+  .image_dark_mode{
+    object-fit: cover;
+    background-color: white;
+    border-radius: 50%;
+    height: 9vh;
+    width: 10vw;
+  }
+  .image{
+    height: 40vh;
+  }
+  .div{
+    padding: 15px;
+  }
+  .div h1{
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px){
+  .header{
+    width: 100%;
+    padding: 30px 0;
+    justify-content: space-around;
+    display: flex;
+  }
+  .div{
+    padding: 15px;
+  }
+  .image_dark_mode{
+    object-fit: cover;
+    background-color: white;
+    border-radius: 50%;
+    height: 9vh;
+    width: 7vw;
+  }
 }
