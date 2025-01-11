@@ -1,6 +1,7 @@
 'use client';
 import { useState } from "react";
 import estilos from "./page.module.css";
+import Topo from "./componentes/Topo";
 import CardAnimal from './componentes/CardAnimal';
 import CardInformacoes from './componentes/CardInformacoes';
 
@@ -17,11 +18,7 @@ export default function Home() {
 
   return (
     <div className={estilos.container_principal}>
-      <header>
-        <h1>Projeto Props + useState</h1>
-        <p>Clique no botão para mudar os componentes abaixo</p>
-        <button onClick={alterarState}>Mudar Animal</button>
-      </header>
+        <Topo clickAlterarAnimal={alterarState}/>
       <main>
         <CardAnimal tipoAnimal={tipoDoComponenteCard}/>
         <CardInformacoes tipoAnimal={tipoDoComponenteCard}/>
