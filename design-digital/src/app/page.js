@@ -25,37 +25,7 @@ export default function Home() {
     <div>
       <Topo alterarTema={alterarTema}/>
       <SecaoBanner/>
-      <SecaoExperienciaTrabalho
-        data="JUNHO 2012 - 2016"
-        titulo="Web Designer"
-        texto="Pied Piper Startup"
-      >
-        <p>
-          Criação de Landig Pages, sites institucionais e E-commerces completamente personalizados 
-          e otimizados para buscadores.
-        </p>
-      </SecaoExperienciaTrabalho>
-      <SecaoExperienciaTrabalho
-        data="AGOSTO 2016 - 2019"
-        titulo="Product Designer"
-        texto="E Corp."
-      >
-        <p>
-          Criação de Landig Pages, sites institucionais e E-commerces completamente personalizados 
-          e otimizados para buscadores.
-        </p>
-      </SecaoExperienciaTrabalho>
-      <SecaoExperienciaTrabalho
-        data="FEVEREIR0 2019 - 2021"
-        titulo="Digital Consulting"
-        texto="Pied Piper Startup"
-      >
-        <p>
-          Criação de Landig Pages, sites institucionais e E-commerces completamente personalizados 
-          e otimizados para buscadores.
-        </p>
-      </SecaoExperienciaTrabalho>
-
+      <SecaoExperienciaTrabalho/>
       <Rodape
         titulo="M."
         texto="Ajudamos a criar uma personalidade digital construindo sua marca no 

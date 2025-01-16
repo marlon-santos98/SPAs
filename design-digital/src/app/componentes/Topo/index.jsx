@@ -6,15 +6,15 @@ import logo from "/public/logo.png"
 
 export default function Topo(props){
     return(
-    <header>
+    <header className={styles.header} >
         <Image
-            className={styles.logo} 
             src={logo}
             alt="Logo"
             width={40}
             height={40}
+            className={styles.img}
         />
-        <button onClick={props.alterarTema}>
+        <button onClick={props.alterarTema} className={styles.button}>
             <Image 
                 src={props.ehTemaEscuro ? iconeSol : iconeLua}
                 alt="icone"

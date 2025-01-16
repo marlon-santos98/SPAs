@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    width: 100%;
+    max-width: 1024px;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 15px;
+}
+.header .img{
+    width: 40px;
+    height: 40px;
+}
+.button{
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    
+}

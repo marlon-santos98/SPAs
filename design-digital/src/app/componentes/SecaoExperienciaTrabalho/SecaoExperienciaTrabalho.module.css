@@ -1,0 +1,15 @@
+.cards{
+    display: flex;
+
+}
+.section{
+    background-color: #F6F8FC;
+    text-align: center;
+}
+.section h2{
+    font-size: 1.8rem;
+}
+.section h2::before{
+    content: "";
+    border: 1px solid yellow;
+}
