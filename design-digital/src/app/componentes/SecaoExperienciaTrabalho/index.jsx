@@ -2,8 +2,9 @@ import styles from "@/app/componentes/SecaoExperienciaTrabalho/SecaoExperienciaT
 import Card from "../Card"
 export default function SecaoExperienciaTrabalho(props){
     return(
-        <section className={styles.section}>
-            <div>
+        <section className={props.ehTemaEscuro ? styles.section_dark : styles.section}>
+            <div className={styles.divSection}>
+            <div className={styles.divContent}>
                 <h2>Experiências de Trabalho</h2>
                 <p> Há mais de 10 anos no mercado de Branding, Desing Gráfico, Criação de
                 Sites e Marketing Digital, nos empenhamos diariamente para entregar
@@ -28,6 +29,7 @@ export default function SecaoExperienciaTrabalho(props){
                     empresa="Pied Piper StartUp"
                     paragrafo="Criação de Landing pages, sites institucionais e E-commerces completamente personalizados e otimizados para buscadores"
                 />
+            </div>
             </div>
         </section>
     )

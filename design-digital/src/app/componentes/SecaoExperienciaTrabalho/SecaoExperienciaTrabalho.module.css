@@ -1,15 +1,68 @@
 .cards{
     display: flex;
-
+    padding-bottom: 150px;
 }
 .section{
     background-color: #F6F8FC;
     text-align: center;
 }
+.section_dark{
+    background-color: #393838;
+    text-align: center;
+    color: white;
+}
+.section_dark h2{
+    font-size: 2rem;
+    position: relative;
+}
+.section_dark h2::before{
+    content: "";
+    border: 2px solid rgb(203, 123, 63);
+    position: absolute;
+    bottom: 1px;
+    left: 48%;
+    width: 7%;
+}
 .section h2{
-    font-size: 1.8rem;
+    position: relative;
+    font-size: 2rem;
 }
 .section h2::before{
     content: "";
-    border: 1px solid yellow;
+    border: 2px solid rgb(203, 123, 63);
+    position: absolute;
+    bottom: -10px;
+    left: 48%;
+    width: 7%;
+}
+.divSection{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.divContent p{
+    margin: 40px 0 60px 0;
+}
+.divContent h2{
+    padding-top: 60px;
+    margin-top: -7px;
+}
+@media(min-width: 300px) and (max-width: 480px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .divContent{
+        padding: 15px;
+    }
+}
+@media(min-width: 481px) and (max-width: 768px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .divContent{
+        padding: 15px;
+    }
 }

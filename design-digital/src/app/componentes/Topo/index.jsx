@@ -6,7 +6,7 @@ import logo from "/public/logo.png"
 
 export default function Topo(props){
     return(
-    <header className={styles.header} >
+    <header className={props.ehTemaEscuro ? styles.topo_dark : styles.topo_claro} >
         <Image
             src={logo}
             alt="Logo"
@@ -14,7 +14,7 @@ export default function Topo(props){
             height={40}
             className={styles.img}
         />
-        <button onClick={props.alterarTema} className={styles.button}>
+        <button onClick={props.alterarTema} className={props.ehTemaEscuro ? styles.btn_dark : styles.btn_claro}>
             <Image 
                 src={props.ehTemaEscuro ? iconeSol : iconeLua}
                 alt="icone"

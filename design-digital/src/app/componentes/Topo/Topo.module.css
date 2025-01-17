@@ -1,18 +1,37 @@
-.header{
-    display: flex;
+.topo_claro{
     width: 100%;
-    max-width: 1024px;
-    justify-content: space-around;
     margin: 0 auto;
-    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding:10px 10px 0 10px;
 }
-.header .img{
-    width: 40px;
-    height: 40px;
+.topo_dark{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    background-color: #393838;
 }
-.button{
-    border-radius: 50%;
-    border: none;
+.btn_dark{
+    border-radius: 20%;
     cursor: pointer;
-    
+    border: none;
+    background-color: black;
+}
+.btn_claro{
+    border: none;
+    border-radius: 50%;
+}
+@media(min-width: 300px) and (max-width: 480px){
+    .topo_claro, .topo_dark{
+        width: 100%;
+        padding: 20px;
+    }
+}
+@media(min-width: 481px) and (max-width: 768px){
+    .topo_claro, .topo_dark{
+        width: 100%;
+        padding: 20px;
+    }
 }

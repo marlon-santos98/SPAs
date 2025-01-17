@@ -1,0 +1,14 @@
+.span{
+    text-align: left;
+    padding: 60px;
+    border: 1px solid rgb(235, 221, 221);
+}
+.span h3{
+    padding: 10px 0 0;
+}
+.span p{
+    margin-top: 10px;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: left;
+}
