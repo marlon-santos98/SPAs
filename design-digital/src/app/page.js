@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 import {useState } from "react";
 import Topo from "./componentes/Topo";
 import SecaoBanner from "./componentes/SecaoBanner";
