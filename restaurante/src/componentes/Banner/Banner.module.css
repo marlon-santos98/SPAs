@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+.img{
+    width: 100%;
+    object-fit: fill;
+}
+.topo{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.topo div{
+    max-width: 50%;
+    position: absolute;
+    text-align: center;
+    color: white;
+}
+.topo div h1{
+    letter-spacing: 5px;
+    font-size: 46px;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+.topo div p{
+    font-family: "Dancing Script", cursive;
+    font-size: 23px;
+    color: goldenrod;
+}
