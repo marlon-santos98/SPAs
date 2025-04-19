@@ -73,7 +73,7 @@ export const useAuthentication = () => {
       } else if (error.message.includes("wrong-password")) {
         systemErrorMessage = "Senha incorreta.";
       } else {
-        systemErrorMessage = "Ocorreu um erro, por favor tenta mais tarde.";
+        systemErrorMessage = "Ocorreu um erro, por favor tente mais tarde.";
       }
 
       setError(systemErrorMessage);
