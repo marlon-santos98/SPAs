@@ -64,7 +64,7 @@ const CreatePost = () => {
   };
 
   return (
-    <div className={styles.create_post}>
+    <div className={styles.createPost}>
       <h2>Criar post</h2>
       <p>Escreva sobre o que quiser e compartilhe o seu conhecimento!</p>
       <form onSubmit={handleSubmit}>
@@ -111,7 +111,7 @@ const CreatePost = () => {
             value={tags}
           />
         </label>
-        {!response.loading && <button className="btn">Criar post!</button>}
+        {!response.loading && <button className="btn">Cadastrar</button>}
         {response.loading && (
           <button className="btn" disabled>
             Aguarde.. .
