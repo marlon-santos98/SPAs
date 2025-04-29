@@ -7,6 +7,8 @@ import { useState } from 'react'
 import { useFetchDocuments } from '../../hooks/useFetchDocuments'
 
 //components
+import PostDetail from '../../components/PostDetail'
+
 
 const Home = () => {
   const [query, setQuery] = useState("")
@@ -24,7 +26,7 @@ const Home = () => {
           <div>
             {loading && <p>Carregando..</p>}
             {posts && posts.map((post) => (
-              <h3>{post.title}</h3>
+              <PostDetail key={post.id} post={post}/>
             ))}
             {posts && posts.length == 0 &&(
               <div className={styles.no_posts}>
