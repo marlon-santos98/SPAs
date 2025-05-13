@@ -5,18 +5,20 @@ import {Link} from 'react-router-dom'
 //hooks
 import {useAuthValue} from '../../context/AuthContext'
 import {useFetchDocuments} from '../../hooks/useFetchDocuments'
-import { HiH3 } from 'react-icons/hi2'
+import { useDeleteDocument } from '../../hooks/useDeleteDocument'
 
 
 const Dashboard = () => {
   const {user} = useAuthValue()
   const uid = user.uid
   const {documents: posts, loading} = useFetchDocuments("posts", null, uid)
-  const deleteDocument = (id) => {
+
+  const {deleteDocument} = useDeleteDocument('posts')
+
       if(loading){
         return <p>Carregando...</p>
       }
-  }   
+
   return (
         <div className={styles.dashboard}>
             <h1>Dashboard</h1>
