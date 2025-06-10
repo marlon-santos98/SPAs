@@ -1,8 +1,9 @@
 const express = require('express');
-const router = express();
+const router = express.Router();
 
+router.use("/api/users", require("./UserRoutes"))
 //test route
-router.get("/", (req, res) => {
-    res.send("Welcome to the React Gram API");
+router.post("/", (req, res) => {
+    res.get("Welcome to the React Gram API");
 })
 module.exports = router;
