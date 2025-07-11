@@ -1,23 +1,26 @@
-const User = require("../models/User")
-const jwt = require("jsonwebtoken")
-const jwtSecret = process.env.JWT_SECRET
+const User = require("../models/User");
 
-const authGuard = async (req, resizeBy, next) => {
-    const authHeader = req.headers["authorization"]
-    const token = authHeader && authHeader.split(" ")[1]
+const jwt = require("jsonwebtoken");
 
-    //check if header has a token
-    if(!token) return res.status(401).json({errors: ['Acesso negado']})
+const jwtSecret = process.env.JWT_SECRET;
 
-    //check if token is valid
-    try {
-        const verified = jwt.verify(token, jwtSecret)
+const authGuard = async (req, res, next) => {
+  const authHeader = req.headers["authorization"];
+  const token = authHeader && authHeader.split(" ")[1];
 
-        req.user = await User.findById(verified.id).select("-password")
-        next()
-    } catch (error) {
-        res.status(401).json({errors: ["Token invalido"]})
-    }
-}
+  // Check if header has a token
+  if (!token) return res.status(401).json({ errors: ["Acesso negado!"] });
 
-module.exports = authGuard
+  // Check if token is valid
+  try {
+    const verified = jwt.verify(token, jwtSecret);
+
+    req.user = await User.findById(verified.id).select("-password");
+
+    next();
+  } catch (err) {
+    res.status(400).json({ errors: ["O Token é inválido!"] });
+  }
+};
+
+module.exports = authGuard;
