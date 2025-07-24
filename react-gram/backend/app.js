@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 
 // Rotas
 const router = require('./routes/Router.js')
-app.use("api", router)
+app.use("/api", router)
 
 
 // Tratamento de erros
