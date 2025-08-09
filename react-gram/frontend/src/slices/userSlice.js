@@ -35,6 +35,16 @@ export const updateProfile = createAsyncThunk(
     }
 )
 
+//getUserDetails
+export const getUserDetails = createAsyncThunk(
+    "user/get",
+    async(id, thunkApi) => {
+        const data = await userService.getUsetDetails(id)
+
+        return data
+    }
+)
+
 //funcoes
 export const userSlice = createSlice({
     name: "user",
@@ -67,6 +77,14 @@ export const userSlice = createSlice({
                     state.loading = false
                     state.error = action.payload
                     state.user = {}
+        }).addCase(getUserDetails.pending, (state) => {
+            state.loading = true
+            state.error = false
+        }).addCase(getUserDetails.fulfilled, (state, action) => {
+            state.loading = false
+            state.sucess = true
+            state.error = null
+            state.user = action.payload
         })
     }
 })
