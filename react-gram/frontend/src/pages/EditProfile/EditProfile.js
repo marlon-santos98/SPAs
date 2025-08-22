@@ -40,39 +40,24 @@ const EditProfile = () => {
 
     console.log(user)
 
-    const handleSubmit = async (e) => {
-        e.prevent.default()
+const handleSubmit = async (e) => {
+    e.preventDefault()
 
-        //Gather user data from states
-        const userData = {
-            name
-        }
+    //Gather user data from states
+    const userData = { name }
+    if(profileImage) userData.profileImage = profileImage
+    if(bio) userData.bio = bio
+    if(password) userData.password = password
 
-        if(profileImage){
-            userData.profileImage = profileImage
-        }
+    //build form data
+    const formData = new FormData()
+    Object.keys(userData).forEach((key) => formData.append(key, userData[key]))
 
-        if(bio){
-            userData.bio = bio
-        }
-
-        if(password){
-            userData.password = password
-        }
-
-        //build form data
-        const formData = new FormData()
-
-        const userFormData = Object.keys(userData).forEach((key) => formData.append(key, userData[key]))
-
-        formData.append("user", userFormData)
-
-        await dispatch(updateProfile(userFormData))
-        setTimeout(() => {
-            dispatch(resetMessage())
-        }, 2000)
-    }
-
+    await dispatch(updateProfile(formData))
+    setTimeout(() => {
+        dispatch(resetMessage())
+    }, 2000)
+}
     const handleFile = (e) => {
         //image preview
         const image = e.target.files[0]
@@ -85,16 +70,16 @@ const EditProfile = () => {
   return <div id='edit-profile'>
     <h2>Edite seus dados</h2>
     <p className='subtitle'>Adicione uma imagem de perfil e conte mais sobre você...</p>
-    {(user.profileImage || previewImage) && (
-        <img
-            className='profile-image'
-            src={
-                previewImage ? URL.createObjectURL(previewImage)
-                : `${uploads}/users/${user.profileImage}`
-            }
-            alt={user.name}
-        />
-    )}
+{(user?.profileImage || previewImage) && (
+    <img
+        className='profile-image'
+        src={
+            previewImage ? URL.createObjectURL(previewImage)
+            : user?.profileImage ? `${uploads}/users/${user.profileImage}` : ""
+        }
+        alt={user?.name || ""}
+    />
+)}
     <form onSubmit={handleSubmit}>
         <input type="text" placeholder='Nome' onChange={(e)=>setName(e.target.value)} value={name || ""}/>
         <input type="email" placeholder='E-mail' disabled value={email || ""}/>

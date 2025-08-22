@@ -35,17 +35,15 @@ export const updateProfile = createAsyncThunk(
     }
 )
 
-//getUserDetails
+// getUserDetails
 export const getUserDetails = createAsyncThunk(
     "user/get",
     async(id, thunkApi) => {
-        const data = await userService.getUsetDetails(id)
-
+        const data = await userService.getUserDetails(id) // Corrija aqui!
         return data
     }
 )
 
-//funcoes
 export const userSlice = createSlice({
     name: "user",
     initialState,
@@ -55,36 +53,45 @@ export const userSlice = createSlice({
         }
     },
     extraReducers: (builder) => {
-        builder.addCase(profile.pending, (state) => {
+        builder
+        .addCase(profile.pending, (state) => {
             state.loading = true
             state.error = false
-        }).addCase(profile.fulfilled, (state, action) => {
+        })
+        .addCase(profile.fulfilled, (state, action) => {
             state.loading = false
-            state.sucess = true
+            state.success = true // Corrija aqui!
             state.error = null
             state.user = action.payload
-        }).addCase(updateProfile.pending, (state) => {
-                    state.loading = true
-                    state.error = false
-                }).addCase(updateProfile.fulfilled, (state, action) => {
-                    state.loading = false
-                    state.sucess = true
-                    state.error = null
-                    state.user = action.payload
-                    state.message = "Usuário atualizado com sucesso"
-                }).addCase(updateProfile.rejected, (state, action) => {
-                    console.log(state, action)
-                    state.loading = false
-                    state.error = action.payload
-                    state.user = {}
-        }).addCase(getUserDetails.pending, (state) => {
+        })
+        .addCase(updateProfile.pending, (state) => {
             state.loading = true
             state.error = false
-        }).addCase(getUserDetails.fulfilled, (state, action) => {
+        })
+        .addCase(updateProfile.fulfilled, (state, action) => {
             state.loading = false
-            state.sucess = true
+            state.success = true // Corrija aqui!
             state.error = null
             state.user = action.payload
+            state.message = "Usuário atualizado com sucesso"
+        })
+        .addCase(updateProfile.rejected, (state, action) => {
+            state.loading = false
+            state.error = action.payload
+            })
+        .addCase(getUserDetails.pending, (state) => {
+            state.loading = true
+            state.error = false
+        })
+        .addCase(getUserDetails.fulfilled, (state, action) => {
+            state.loading = false
+            state.success = true // Corrija aqui!
+            state.error = null
+            state.user = action.payload
+        })
+        .addCase(getUserDetails.rejected, (state, action) => { // Adicione este bloco!
+            state.loading = false
+            state.error = action.error.message
         })
     }
 })

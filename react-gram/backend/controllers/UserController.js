@@ -1,4 +1,4 @@
-const User = require("../models/User");
+const User = require("../middleware/models/User");
 
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -126,17 +126,18 @@ const update = async (req, res) => {
 const getUserById = async (req, res) => {
   const { id } = req.params;
 
-  const user = await User.findById(mongoose.Types.ObjectId(id)).select(
-    "-password"
-  );
+  try {
+    const user = await User.findById(id).select("-password");
 
-  // Check if user exists
-  if (!user) {
-    res.status(404).json({ errors: ["Usuário não encontrado!"] });
-    return;
+    if (!user) {
+      res.status(404).json({ errors: ["Usuário não encontrado!"] });
+      return;
+    }
+
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(500).json({ errors: ["Erro ao buscar usuário."] });
   }
-
-  res.status(200).json(user);
 };
 
 module.exports = {

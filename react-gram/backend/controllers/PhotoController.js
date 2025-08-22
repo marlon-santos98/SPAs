@@ -1,4 +1,4 @@
-const Photo = require("../models/Photo");
+const Photo = require("../middleware/models/Photo");
 
 const mongoose = require("mongoose");
 
